@@ -38,9 +38,11 @@ jobs:
           ls -l /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/*
           for i in $(ls /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/)
           do
-              echo $i
+              echo Processing $i
+              echo cp /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/$i "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/${i}.json"
               cp /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/$i "/home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/${i}.json"
           done
+          echo Finikitaun !!
           ls -l /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/
           #cat /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/reports/LGVExternalRepos/deps.*.json
 
