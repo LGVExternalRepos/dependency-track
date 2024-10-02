@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for better relevancy of analysis.
+          fetch-depth: 0  # Shallow clones should be disabled for better relevancy of analysis
 
       - name: Xygeni-Scanner
         uses: xygeni/xygeni-action@v3.2.0
@@ -61,3 +61,4 @@ jobs:
              -r /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/LGVExternalRepos/misconf.*.json \
              -r /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/LGVExternalRepos/secrets.*.json \
              -r /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/LGVExternalRepos/suspectdeps.*.json
+          done
